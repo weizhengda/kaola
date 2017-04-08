@@ -1,0 +1,234 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:hover {
+  color: red;
+}
+#top-wrap,
+#search-wrap,
+#nav-wrap,
+#banner-wrap,
+#goods-wrap,
+#footer-wrap {
+  width: 100%;
+}
+#top,
+#search,
+#nav,
+#goods,
+#footer {
+  width: 1263px;
+  margin: 0 auto;
+}
+/*top start*/
+#top-wrap {
+  height: 31px;
+  line-height: 31px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #ededee;
+}
+#top-wrap #top {
+  color: #666;
+}
+#top-wrap #top #top-left {
+  float: left;
+}
+#top-wrap #top #top-left a {
+  padding-left: 10px;
+}
+#top-wrap #top #top-md {
+  margin-left: 20px;
+  float: left;
+}
+#top-wrap #top #top-right {
+  float: right;
+}
+#top-wrap #top #top-right li {
+  float: left;
+}
+#top-wrap #top #top-right li a {
+  padding: 0 10px;
+  border-left: 1px solid #ccc;
+}
+/*#search-wrap{
+  height:100px;
+  background: #fff;
+  & #search{
+    & #logo{
+      width:220px;
+      height:42px;
+      display: block;
+      float:left;
+      margin:29px 0;
+    }
+    & #search-md{
+      float:left;
+      & #search-box{
+        width:458px;
+        height:36px;
+        margin:32px 200px;
+        border:2px solid #000000;
+        & input{
+          width:350px;
+          height:28px;
+          display: block;
+          float: left;
+          margin:4px 0;
+          border:0;
+        }
+        & span{
+          width:36px;
+          height:36px;
+          display: block;
+          float:right;
+          background: #000000;
+        }
+      }
+    }
+    & #car{
+      width:110px;
+      height:36px;
+      margin:32px 0;
+      display: block;
+      float:right;
+      border:1px solid #ccc;
+      border-radius: 5px;
+      & span{
+        line-height:36px;
+      }
+    }
+  }
+}*/
+/*search start*/
+#search-wrap #search {
+  height: 150px;
+  padding-top: 30px;
+}
+/*nav start*/
+#nav-wrap {
+  height: 33px;
+  background: #fff;
+  border-bottom: 3px solid #000;
+}
+#nav-wrap #nav ul {
+  width: 1000px;
+  height: 33px;
+}
+#nav-wrap #nav ul li {
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  float: left;
+}
+#nav-wrap #nav ul li:nth-child(1) {
+  width: 160px;
+  background: #000;
+  color: #fff;
+}
+#nav-wrap #nav ul li a {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+/*banner start*/
+#banner-wrap {
+  background: #f6f6f6;
+}
+#banner-wrap #banner {
+  margin: 0 auto;
+  position: relative;
+}
+#banner-wrap #banner img {
+  width: 100%;
+  height: 100%;
+}
+#banner-wrap #banner #nav2-box {
+  width: 1263px;
+  height: 400px;
+  position: absolute;
+  border: 1px solid #ccc;
+  top: 0;
+  left: 83px;
+}
+#banner-wrap #banner #nav2-box #nav2-left {
+  width: 160px;
+  height: 400px;
+  float: left;
+  background: rgba(15, 15, 15, 0.82);
+}
+#banner-wrap #banner #nav2-box #nav2-left li {
+  width: 160px;
+  height: 39px;
+  border-bottom: 1px solid #fff;
+}
+#banner-wrap #banner #nav2-box #nav-right {
+  float: left;
+}
+/*goods start*/
+#goods-wrap {
+  background: #fff;
+}
+#goods-wrap #goods .goods-title1 {
+  border-bottom: 2px solid #000000;
+}
+#goods-wrap #goods .goods-title2 {
+  height: 50px;
+}
+#goods-wrap #goods .goods-title2 h3 {
+  float: left;
+  margin-right: 50px;
+}
+#goods-wrap #goods .goods-title2 ul {
+  float: left;
+  width: 80%;
+  position: relative;
+  top: 20px;
+  font-size: 20px;
+}
+#goods-wrap #goods .goods-title2 ul span {
+  float: left;
+}
+#goods-wrap #goods .goods-title2 ul li {
+  float: left;
+}
+#goods-wrap #goods .goods-title2 ul li:last-of-type {
+  float: right;
+}
+#goods-wrap #goods .goods-title2 ul li a {
+  padding: 0 10px;
+}
+#goods-wrap #goods .goods-title2 ul li a.red {
+  color: red;
+}
+#goods-wrap #goods .goods-title2 ul li + li a {
+  border-left: 1px solid #ccc;
+}
+#goods-wrap #goods .goods-content2 {
+  margin-top: 10px;
+}
+#goods-wrap #goods .goods-content3 {
+  margin-top: 10px;
+}
+#goods-wrap #goods .goods-content3 .row {
+  margin: 0;
+  padding: 0;
+}
+/*footer start*/
+#footer-wrap {
+  background: #333;
+}
