@@ -3,30 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>登录-网易考拉海购</title>
-    <link rel="stylesheet" href="Less/login.css">
+    <link rel="stylesheet" href="/Less/login.css">
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript">
+		function login(){
+			var username = $('#username').val(),password = $('#password').val();
+			var data = { "uname": username, "upwd":password};
+			$.ajax({
+				url:'/login',
+				type:'POST',
+				data:data,
+				success:function(data,status){
+					if(status == 'success'){
+						location.href='/';
+					}
+				},
+				error:function(data,status){
+					if(status == "error"){
+						location.href='login'
+					}
+				}
+			});
+		}
+    </script>
 </head>
 <body>
 <header id="header-wrap">
     <div id="header">
-        <div class="left"><a href="index.html"><img src="images/login1-1.png"/></a></div>
-        <div class="right"><img src="images/login1-2.jpg"/></div>
+        <div class="left"><a href="index"><img src="/images/login1-1.png"/></a></div>
+        <div class="right"><img src="/images/login1-2.jpg"/></div>
     </div>
 </header>
 <section id="content-wrap">
     <div id="content">
-        <div class="left"><img src="images/login2-1.png"/></div>
+        <div class="left"><img src="/images/login2-1.png"/></div>
         <div class="right">
             <div class="right-left">
-                <form action="#">
+                <form action="#" method="post">
                     <h3>登录网易邮箱账号</h3>
-                    <label><input type="text"/></label>
-                    <label><input type="text"/></label>
+                    <label><input id="username" type="text"/></label>
+                    <label><input id="password" type="text"/></label>
                     <label class="cbx">
                         <input type="checkbox"/>
                         <span>十天内免登陆</span>
                         <i>忘记密码</i>
                     </label>
-                    <label><input class="sub" type="submit" value="登录"/></label>
+                    <label><input class="sub" type="button" onclick="login()" value="登录"/></label>
                     <div class="email">
                         <span>没有网易邮箱？</span>
                         <i>立即免费注册>></i>
@@ -41,7 +63,7 @@
                 </div>
             </div>
             <div class="code">
-                <a href="#"><img src="images/login2-2.jpg"/></a>
+                <a href="#"><img src="/images/login2-2.jpg"/></a>
             </div>
         </div>
     </div>
@@ -66,13 +88,13 @@
             <span>出版物经营许可证:新出发浙杭经零字第00136号</span>
         </div>
         <div class="f3">
-            <img src="images/login3-1.png"/>
+            <img src="/images/login3-1.png"/>
             <span>浙公网安备 33010002000066号</span>
             <span>网易公司版权所有©1997-2017</span>
         </div>
         <div class="f4">
-            <img src="images/login3-2.png" />
-            <img src="images/login3-3.gif" />
+            <img src="/images/login3-2.png" />
+            <img src="/images/login3-3.gif" />
         </div>
     </div>
 </footer>

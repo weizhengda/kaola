@@ -18,7 +18,7 @@ gulp.task('browser-sync', function () {
 		files: files,
 		port: 3000,
 		server: {
-			baseDir: ['./src','./']
+			baseDir: ['./public','./']
 		}
 	})
 });
@@ -36,7 +36,7 @@ gulp.task("html", function () {
 		// minifyCSS: true//压缩页面CSS
 	};
 	
-	gulp.src(['src/**/*.html', 'src/**/*.htm'])
+	gulp.src(['public/**/*.html', 'public/**/*.htm'])
 		.pipe(htmlmin(options))
 		.pipe(gulp.dest("dist"))
 });
@@ -44,7 +44,7 @@ gulp.task("html", function () {
 //*****************3.gulp-imagemin******************
 var imagemin = require("gulp-imagemin");
 gulp.task("imagemin", function () {
-	gulp.src('src/**/*.{jpg,png,gif,ico}')
+	gulp.src('public/**/*.{jpg,png,gif,ico}')
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist'))
 	
@@ -55,7 +55,7 @@ cssmin = require('gulp-minify-css');
 cssver = require('gulp-make-css-url-version');
 
 gulp.task('Cssmin', function () {
-	gulp.src('src/css/*.css')
+	gulp.src('public/css/*.css')
 		.pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
 		.pipe(cssmin())
 		.pipe(gulp.dest('dist/css'));
@@ -66,7 +66,7 @@ uglify = require('gulp-uglify');
 gulp.task('jsmin', function () {
 	//压缩src/js目录下的所有js文件
 	//除了test1.js和test2.js（**匹配src/js的0个或多个子文件夹）
-	gulp.src(['src/js/*.js', '!src/js/**/{test1,test2}.js'])
+	gulp.src(['public/js/*.js', '!public/js/**/{test1,test2}.js'])
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'));
 });
@@ -77,9 +77,9 @@ less = require('gulp-less'),
 	livereload = require('gulp-livereload');
 
 gulp.task('less', function () {
-	gulp.src('src/less/*.less')
+	gulp.src('public/less/*.less')
 		.pipe(less())//编译less
-		.pipe(gulp.dest('src/css'))// 生成目录
+		.pipe(gulp.dest('public/css'))// 生成目录
 		.pipe(livereload());// 编译重新加载
 });
 
@@ -87,17 +87,17 @@ gulp.task('less', function () {
 //例如下面任务同时生成sourcemap：
 //var sourcemaps = require('gulp-sourcemaps');
 //gulp.task('less', function () {
-//    gulp.src(['src/less/*.less'])
+//    gulp.public(['public/less/*.less'])
 //        .pipe(sourcemaps.init())
 //        .pipe(less())
 //        .pipe(sourcemaps.write('./'))
-//        .pipe(gulp.dest('src/css'))
+//        .pipe(gulp.dest('public/css'))
 //        .pipe(livereload());
 //});
 
 gulp.task('watch', function () {
 	livereload.listen();//监听，重新加载
-	gulp.watch('src/less/**/*.less', ['less', 'browser-sync']);
+	gulp.watch('public/less/**/*.less', ['less', 'browser-sync']);
 });
 
 //***************7.gulp-connect********************

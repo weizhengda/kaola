@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -16,6 +17,7 @@ a {
 }
 a:hover {
   color: red;
+  text-decoration: none;
 }
 #top-wrap,
 #search-wrap,
@@ -30,7 +32,7 @@ a:hover {
 #nav,
 #goods,
 #footer {
-  width: 1263px;
+  width: 1090px;
   margin: 0 auto;
 }
 /*top start*/
@@ -148,9 +150,12 @@ a:hover {
 /*banner start*/
 #banner-wrap {
   background: #f6f6f6;
+  height: 400px;
+  position: relative;
 }
 #banner-wrap #banner {
   margin: 0 auto;
+  z-index: 0;
   position: relative;
 }
 #banner-wrap #banner img {
@@ -179,9 +184,64 @@ a:hover {
 #banner-wrap #banner #nav2-box #nav-right {
   float: left;
 }
+#banner-wrap #banner-nav {
+  width: 1090px;
+  height: 400px;
+  z-index: 100;
+  margin: 0 auto;
+  position: relative;
+  top: -400px;
+  background: rgba(0, 0, 0, 0);
+}
+#banner-wrap #banner-nav .nav-left {
+  width: 160px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  float: left;
+}
+#banner-wrap #banner-nav .nav-left a {
+  width: 100%;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+#banner-wrap #banner-nav .nav-left a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
+  border-left: 3px solid red;
+  border-right: 2px solid white;
+}
+#banner-wrap #banner-nav .nav-left a span {
+  color: #fff;
+  padding-right: 5px;
+}
+#banner-wrap #banner-nav .nav-right {
+  width: 930px;
+  height: 400px;
+  position: relative;
+  background: #fff;
+  float: left;
+}
+#banner-wrap #banner-nav .nav-right div {
+  width: 930px;
+  height: 400px;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+}
+#banner-wrap #banner-nav .nav-right .selected {
+  display: block;
+}
 /*goods start*/
 #goods-wrap {
   background: #fff;
+}
+#goods-wrap #goods {
+  position: relative;
 }
 #goods-wrap #goods .goods-title1 {
   border-bottom: 2px solid #000000;
@@ -227,6 +287,59 @@ a:hover {
 #goods-wrap #goods .goods-content3 .row {
   margin: 0;
   padding: 0;
+}
+#goods-wrap #goods #aside-left {
+  width: 100px;
+  height: 600px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 100px;
+  left: -100px;
+}
+#goods-wrap #goods #aside-left ul li {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+#goods-wrap #goods #aside-left ul li:nth-of-type(1) {
+  border-bottom: 1px solid #ccc;
+  height: 60px;
+}
+#goods-wrap #goods #aside-left ul li:nth-of-type(2) {
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+#goods-wrap #goods #aside-left ul li:nth-of-type(3) {
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+#goods-wrap #goods #aside-left ul li:nth-of-type(4) {
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+#goods-wrap #goods #aside-left ul li:nth-last-child(1) {
+  border-top: 1px solid #ccc;
+  height: 150px;
+}
+#goods-wrap #goods #aside-left ul li a img {
+  width: 100%;
+  height: 100%;
+}
+#goods-wrap #goods #aside-right {
+  width: 100px;
+  height: 350px;
+  position: absolute;
+  top: 100px;
+  right: -100px;
+  background: #fff;
+  border: 1px solid #ccc;
 }
 /*footer start*/
 #footer-wrap {
