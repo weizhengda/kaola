@@ -48,7 +48,7 @@ gulp.task("imagemin", function () {
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist'))
 	
-})
+});
 //******************4.gulp-minify-css*****************
 cssmin = require('gulp-minify-css');
 //确保已本地安装gulp-make-css-url-version [cnpm install gulp-make-css-url-version --save-dev]
