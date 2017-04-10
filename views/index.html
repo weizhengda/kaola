@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>网易考拉海购</title>
+    <title>网易考拉海购-网易旗下</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/swiper.min.css">
     <link rel="stylesheet" href="/css/mySwiper.css">
@@ -19,9 +20,14 @@
 <nav id="top-wrap">
     <div id="top" class="container">
         <div id="top-left">
-            <span>考拉欢迎你！</span>
+            <% if(user){ %>
+            <span>你好,<%=user.name%>!</span>
+            <a href="logout">退出</a>
+            <% } else{%>
+            <span>考拉欢迎你!</span>
             <a href="login">登录</a>
             <a href="register">免费注册</a>
+            <% }%>
         </div>
         <div id="top-md">
             <a href="#">手机考拉海购</a>
@@ -39,13 +45,13 @@
 </nav>
 <header id="search-wrap">
     <div id="search">
-        <div class="row">
+        <!--<div class="row">
             <div class="logo col-md-3">
                 <a id="logo" href="#"><img src="/images/logo.png"/></a>
             </div>
             <div class="col-md-6">
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"placeholder="护发精油">
                     <span class="input-group-addon glyphicon glyphicon-search"></span>
                 </div>
             </div>
@@ -54,6 +60,23 @@
                     <a href="cart" class="glyphicon glyphicon-align-left" aria-hidden="true">购物车</a>
                 </button>
             </div>
+        </div>-->
+        <div class="left">
+            <a  href="#"><img src="/images/logo.png"/></a>
+        </div>
+        <div class="middle">
+            <input type="text" placeholder="护发精油"/><span></span>
+            <ul>
+                <li><a href="#">游戏充值</a></li>
+                <li><a href="#">奶粉 </a></li>
+                <li><a href="#">马油</a></li>
+                <li><a href="#">MK</a></li>
+                <li><a href="#">麦片</a></li>
+                <li><a href="#">LAMY</a></li>
+            </ul>
+        </div>
+        <div class="right">
+
         </div>
     </div>
 </header>
@@ -87,32 +110,982 @@
             <div class="swiper-button-prev"></div>
         </div>
     </div>
-    <div id="banner-nav">
-        <div class="nav-left">
+    <ul id="banner-nav">
+        <li>
             <a href="#"><span>母婴儿童</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>奶粉</dt>
+                    <dl>
+                        <a href="#" class="red">爱他美</a>
+                        <a href="#" class="red">牛栏</a>
+                        <a href="#" class="red">Hero Baby</a>
+                        <a href="#" class="red">喜宝</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">贝拉米</a>
+                        <a href="#" class="red">美素佳儿</a>
+                        <a href="#" > 美林</a>
+                        <a href="#" class="red"> a2</a>
+                        <a href="#" > 惠氏</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red"> 雅培</a>
+                        <a href="#"> 美赞</a>
+                        <a href="#"> 臣贝儿</a>
+                        <a href="#" class="red"> 合生元</a>
+                        <a href="#" class="red"> Pre段</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red"> 1段</a>
+                        <a href="#" class="red"> 2段</a>
+                        <a href="#"> 3段</a>
+                        <a href="#"> 5段（2+）</a>
+                    </dl>
+                    <dl>
+                        <a href="#"> 4段（1+）</a>
+                        <a href="#"> 6段</a>
+                    </dl>
+                    <dt>营养辅食</dt>
+                    <dl>
+                        <a href="#" class="red">辅食泥</a>
+                        <a href="#" class="red">米粉米糊</a>
+                        <a href="#" class="red">泡芙</a>
+                        <a href="#">溶溶豆</a>
+                    </dl>
+                    <dl>
+
+                        <a href="#">营养品</a>
+                        <a href="#">饼干</a>
+                        <a href="#">肉松面仔</a>
+                        <a href="#">调味品</a>
+                    </dl>
+                    <dl>
+                        <a href="#">其他辅食</a>
+                        <a href="#">其他零食</a>
+                    </dl>
+                    <dt>童装童鞋</dt>
+                    <dl>
+                        <a href="#" class="red">童装</a>
+                        <a href="#">儿童配饰</a>
+                        <a href="#" class="red">童鞋</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>纸尿裤/拉拉裤</dt>
+                    <dl>
+                        <a href="#" class="red">花王</a>
+                        <a href="#" class="red">尤妮佳</a>
+                        <a href="#" class="red">大王</a>
+                        <a href="#" class="red">好奇</a>
+                        <a href="#">妈咪宝贝</a>
+                    </dl>
+                    <dl>
+                        <a href="#">帮宝适</a>
+                        <a href="#">班博</a>
+                        <a href="#">科克兰</a>
+                        <a href="#">宝松怡</a>
+                        <a href="#">NB号</a>
+                    </dl>
+                    <dl>
+                        <a href="#">S号</a>
+                        <a href="#">M号</a>
+                        <a href="#">L号</a>
+                        <a href="#">XL号</a>
+                        <a href="#">XXL号</a>
+                    </dl>
+                    <dl></dl>
+                    <dl></dl>
+                    <dt>宝宝用品</dt>
+                    <dl>
+                        <a href="#" class="red">洗漱护肤</a>
+                        <a href="#" class="red">护理</a>
+                        <a href="#" class="red">喂养</a>
+                        <a href="#">出行</a>
+                        <a href="#">清洁消毒</a>
+                    </dl>
+                    <dl>
+                        <a href="#">文具图书</a>
+                        <a href="#"> 积木</a>
+                        <a href="#">益智玩具</a>
+                        <a href="#">出行</a>
+                        <a href="#">其他玩具</a>
+                    </dl>
+                    <dl>
+                        <a href="#">宝宝家居</a>
+                        <a href="#">小家电</a>
+                    </dl>
+                    <dt>孕妈必备</dt>
+                    <dl>
+                        <a href="#" class="red">营养</a>
+                        <a href="#" class="red">洗护</a>
+                        <a href="#">待产新生</a>
+                        <a href="#">穿戴</a>
+                        <a href="#">塑身</a>
+                    </dl>
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>美容彩妆</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>护肤</dt>
+                    <dl>
+                        <a href="#" class="red">洁面</a>
+                        <a href="#">卸妆</a>
+                        <a href="#" class="red">爽肤</a>
+                        <a href="#" class="red">水面霜</a>
+                        <a href="#">眼部护理</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">精华乳液</a>
+                        <a href="#" class="red">凝胶</a>
+                        <a href="#">手/足护理</a>
+                        <a href="#">身体护理</a>
+                    </dl>
+                    <dl>
+                        <a href="#">唇部护理</a>
+                        <a href="#" class="red">护肤套装</a>
+                        <a href="#" class="red">男士面膜</a>
+                    </dl>
+                    <dl>
+                        <a href="#">精油芳疗</a>
+                        <a href="#">面部护肤</a>
+                    </dl>
+                    <dt>彩妆</dt>
+                    <dl>
+                        <a href="#" class="red">BB霜/CC霜</a>
+                        <a href="#">唇膏/唇彩</a>
+                        <a href="#">隔离/妆前</a>
+                        <a href="#">粉底</a>
+                    </dl>
+                    <dl>
+                        <a href="#">粉饼/散粉</a>
+                        <a href="#" class="red">美甲</a>
+                        <a href="#" class="red">眼线</a>
+                        <a href="#">眉笔</a>
+                        <a href="#" class="red">睫毛膏</a>
+                    </dl>
+                    <dl>
+                        <a href="#">眼影</a>
+                        <a href="#">腮红</a>
+                        <a href="#">遮瑕</a>
+                        <a href="#">高光/修颜</a>
+                        <a href="#" class="red">香水</a>
+                    </dl>
+                    <dl>
+                        <a href="#">化妆工具</a>
+                        <a href="#">彩妆工具</a>
+                    </dl>
+                    <dt>香水/香氛</dt>
+                    <dl>
+                        <a href="#" class="red">女士香水</a>
+                        <a href="#">男士香水</a>
+                        <a href="#">香水套装</a>
+                        <a href="#">Q版香水</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>面膜</dt>
+                    <dl>
+                        <a href="#" class="red">可莱丝</a>
+                        <a href="#">森田药妆</a>
+                        <a href="#" class="red">Montagne</a>
+                    </dl>
+                    <dl>
+                        <a href="#">jeunesse</a>
+                        <a href="#">丽得姿</a>
+                        <a href="#">SNPElizavecca</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">我的心机</a>
+                        <a href="#">自然晨露</a>
+                        <a href="#">THE BODY SHOP</a>
+                    </dl>
+                    <dl>
+                        <a href="#">我的美丽日记</a>
+                        <a href="#">BEYOND</a>
+                        <a href="#">其他面膜</a>
+                    </dl>
+                    <dt>防晒修复</dt>
+                    <dl>
+                        <a href="#" class="red">水宝宝</a>
+                        <a href="#">露得清</a>
+                        <a href="#">香蕉船</a>
+                        <a href="#">高丝</a>
+                    </dl>
+                    <dl>
+                        <a href="#">曼秀雷敦</a>
+                        <a href="#">碧柔</a>
+                        <a href="#">高丽雅娜</a>
+                        <a href="#">Ego</a>
+                    </dl>
+                    <dl>
+                        <a href="#">KISS ME</a>
+                        <a href="#">其他防晒</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>服饰鞋包</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>精选大牌</dt>
+                    <dl>
+                        <a href="#" class="red">MICHAEL</a>
+                        <a href="#">KORSCOACH</a>
+                    </dl>
+                    <dl>
+                        <a href="#">蔻驰</a>
+                        <a href="#" class="red">SWAROVSKIFURLA芙拉</a>
+                    </dl>
+                    <dl>
+                        <a href="#">Kipling凯浦林</a>
+                        <a href="#">Salvatore Ferragamo</a>
+                    </dl>
+                    <dl>
+                        <a href="#">LONGCHAMP珑骧</a>
+                        <a href="#">BOTTEGA VENETAKate</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">SpadeRebecca</a>
+                        <a href="#">Minkoff</a>
+                        <a href="#">土拨鼠</a>
+                    </dl>
+                    <dt>女士箱包</dt>
+                    <dl>
+                        <a href="#" class="red">斜挎包</a>
+                        <a href="#">手提包</a>
+                        <a href="#">手拿包</a>
+                        <a href="#">双肩包</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">化妆包</a>
+                        <a href="#">钱包/卡包</a>
+                        <a href="#">附件包</a>
+                    </dl>
+                    <dt>男士箱包</dt>
+                    <dl>
+                        <a href="#" class="red">斜挎包</a>
+                        <a href="#">手拿包</a>
+                        <a href="#">双肩包</a>
+                        <a href="#">商务包</a>
+                    </dl>
+                    <dl>
+                        <a href="#">钱包/卡包</a>
+                        <a href="#">网易考拉拉杆箱</a>
+                        <a href="#">手提包</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>手表配饰</dt>
+                    <dl>
+                        <a href="#" class="red">墨镜</a>
+                        <a href="#">眼镜</a>
+                        <a href="#">腰带</a>
+                        <a href="#">项链</a>
+                        <a href="#">手镯</a>
+                    </dl>
+                    <dl>
+                        <a href="#">大牌手表</a>
+                        <a href="#">流行饰品</a>
+                        <a href="#">围巾/丝巾</a>
+                    </dl>
+                    <dl>
+                        <a href="#">Zippo 打火机</a>
+                        <a href="#">Ray·Ban 雷朋</a>
+                    </dl>
+                    <dl>
+                        <a href="#">GENTLE MONSTER</a>
+                        <a href="#">KAREN WALKER</a>
+                    </dl>
+                    <dl>
+                        <a href="#">军刀</a>
+                        <a href="#">其他配件</a>
+                    </dl>
+                    <dt>服饰内衣</dt>
+                    <dl>
+                        <a href="#">男装</a>
+                        <a href="#">女装</a>
+                        <a href="#">丝袜</a>
+                        <a href="#">Calvin Klein 卡文克莱</a>
+                    </dl>
+                    <dl>
+                        <a href="#">睡衣/家居服套装</a>
+                        <a href="#">内衣</a>
+                    </dl>
+                    <dt>鞋</dt>
+                    <dl>
+                        <a href="#">女鞋</a>
+                        <a href="#">男鞋</a>
+                        <a href="#">户外鞋</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>家居个护</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>洗护日用</dt>
+                    <dl>
+                        <a href="#" class="red">洗发水</a>
+                        <a href="#">护发素</a>
+                        <a href="#">发膜</a>
+                        <a href="#">染发剂</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">护发精油</a>
+                        <a href="#">梳子</a>
+                        <a href="#">沐浴露</a>
+                        <a href="#">沐浴皂</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">洗手液</a>
+                        <a href="#">牙膏</a>
+                        <a href="#">牙刷</a>
+                        <a href="#">漱口水</a>
+                    </dl>
+                    <dt>其他个护</dt>
+                    <dl>
+                        <a href="#" class="red">眼罩</a>
+                        <a href="#">口罩</a>
+                        <a href="#">其他个护</a>
+                        <a href="#">避孕套</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">人体润滑</a>
+                        <a href="#">男用器具</a>
+                        <a href="#">女用器具</a>
+                    </dl>
+                    <dl>
+                        <a href="#">情趣玩具</a>
+                    </dl>
+                    <dt>居家用品</dt>
+                    <dl>
+                        <a href="#" class="red">杯子</a>
+                        <a href="#">滤水壶/滤芯锅具</a>
+                        <a href="#">刀具</a>
+                        <a href="#">厨房餐饮</a>
+                    </dl>
+                    <dl>
+                        <a href="#">纸品</a>
+                        <a href="#">衣物清洁</a>
+                        <a href="#">驱虫除臭</a>
+                        <a href="#">家居清洁</a>
+                    </dl>
+                    <dl>
+                        <a href="#">收纳整理</a>
+                        <a href="#">创意礼品</a>
+                        <a href="#">宠物生活</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>女性护理</dt>
+                    <dl>
+                        <a href="#" class="red">卫生巾</a>
+                        <a href="#">护垫</a>
+                        <a href="#">卫生棉条</a>
+                        <a href="#">私处洗液</a>
+                    </dl>
+                    <dl></dl>
+                    <dl></dl>
+                    <dt>宠物生活</dt>
+                    <dl>
+                        <a href="#" class="red">宠物主粮</a>
+                        <a href="#">宠物洗护美容</a>
+                        <a href="#">宠物玩具</a>
+                    </dl>
+                    <dl></dl>
+                    <dl></dl>
+                    <dt>家装家纺</dt>
+                    <dl>
+                        <a href="#" class="red">床品套件</a>
+                        <a href="#" class="red">枕头</a>
+                        <a href="#" >床上用品</a>
+                        <a href="#" class="red">毛巾浴巾</a>
+                    </dl>
+                    <dl>
+                        <a href="#">浴袍</a>
+                        <a href="#">其他家纺用品</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>营养保健</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>营养补充</dt>
+                    <dl>
+                        <a href="#">维生素</a>
+                        <a href="#" class="red">鱼油</a>
+                        <a href="#" class="red">酵素</a>
+                        <a href="#">蛋白粉</a>
+                        <a href="#" class="red">葡萄籽</a>
+                    </dl>
+                    <dl>
+                        <a href="#">蔓越莓</a>
+                        <a href="#">叶酸</a>
+                        <a href="#">蜂蜜/蜂胶</a>
+                        <a href="#">铁</a>
+                        <a href="#" class="red">钙</a>
+                    </dl>
+                    <dl>
+                        <a href="#">蛋白质/氨基酸</a>
+                        <a href="#">大豆异黄酮</a>
+                        <a href="#" class="red">大蒜提取物</a>
+                    </dl>
+                    <dl>
+                        <a href="#">胶原蛋白</a>
+                        <a href="#">参类</a>
+                        <a href="#">蜂蜜</a>
+                        <a href="#">奶蓟草</a>
+                        <a href="#" class="red">月见草</a>
+                    </dl>
+                    <dl>
+                        <a href="#">番茄红素</a>
+                        <a href="#">芦荟</a>
+                        <a href="#">卵磷脂</a>
+                        <a href="#" class="red">银杏</a>
+                    </dl>
+                    <dl>
+                        <a href="#">叶黄/蓝莓</a>
+                        <a href="#" class="red">DHA</a>
+                        <a href="#" class="red">维骨力</a>
+                    </dl>
+                    <dt>女性必备</dt>
+                    <dl>
+                        <a href="#">减肥瘦身</a>
+                        <a href="#">舒缓岁月</a>
+                        <a href="#">胶原蛋白</a>
+                        <a href="#" class="red">内分泌</a>
+                    </dl>
+                    <dl>
+                        <a href="#">酵素</a>
+                        <a href="#" class="red">补气养血</a>
+                    </dl>
+                    <dt>男性必备</dt>
+                    <dl>
+                        <a href="#">护肝</a>
+                        <a href="#">补钙</a>
+                        <a href="#">肾、腺</a>
+                        <a href="#" class="red">玛卡</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>健康养护</dt>
+                    <dl>
+                        <a href="#">男性功能</a>
+                        <a href="#">美容养颜</a>
+                        <a href="#" class="red">调节三高</a>
+                    </dl>
+                    <dl>
+                        <a href="#">关节养护</a>
+                        <a href="#">肝肾养护</a>
+                        <a href="#" class="red">减肥瘦身</a>
+                    </dl>
+                    <dl>
+                        <a href="#">调节免疫</a>
+                        <a href="#">心脑保健</a>
+                        <a href="#">滋补养生</a>
+                    </dl>
+                    <dl>
+                        <a href="#">骨骼健康</a>
+                        <a href="#">保护视力</a>
+                        <a href="#" class="red">改善睡眠</a>
+                    </dl>
+                    <dl>
+                        <a href="#">改善贫血</a>
+                        <a href="#">护发养发</a>
+                        <a href="#" class="red">药品资讯</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>关爱老年</dt>
+                    <dl>
+                        <a href="#">滋补养生</a>
+                        <a href="#">心脑保健</a>
+                        <a href="#" class="red">调节三高</a>
+                    </dl>
+                    <dl>
+                        <a href="#">调节免疫</a>
+                        <a href="#">肝肾养护</a>
+                        <a href="#" class="red">骨骼关节</a>
+                    </dl>
+                    <dt>国际汇</dt>
+                    <dl>
+                        <a href="#" class="red">澳新</a>
+                        <a href="#">韩国</a>
+                        <a href="#" class="red">德国</a>
+                        <a href="#">日本</a>
+                        <a href="#">美国</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>海外直邮</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>母婴专区</dt>
+                    <dl>
+                        <a href="#" class="red">婴儿奶粉</a>
+                        <a href="#">美德乐吸奶器</a>
+                        <a href="#" class="red">宝宝用品</a>
+                    </dl>
+                    <dl>
+                        <a href="#">玩具总动员</a>
+                        <a href="#">小黄人玩具</a>
+                        <a href="#">LEGO 乐高</a>
+                    </dl>
+                    <dt>电子生活</dt>
+                    <dl>
+                        <a href="#" class="red">beats by dr. dre</a>
+                        <a href="#" class="red">SENNHEISER 森海塞尔</a>
+                    </dl>
+                    <dl>
+                        <a href="#">智能手环</a>
+                        <a href="#">鼠标</a>
+                        <a href="#">音箱</a>
+                        <a href="#">耳麦</a>
+                        <a href="#">影音娱乐</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>服饰鞋包</dt>
+                    <dl>
+                        <a href="#">Daniel Wellington</a>
+                        <a href="#">Calvin KleinZippo</a>
+                    </dl>
+                    <dl>
+                        <a href="#">打火机Pandora</a>
+                        <a href="#">潘多拉CITIZEN</a>
+                    </dl>
+                    <dl>
+                        <a href="#">西铁城</a>
+                        <a href="#">YSL</a>
+                        <a href="#">运动鞋</a>
+                        <a href="#">服装</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>美容彩妆</dt>
+                    <dl>
+                        <a href="#">春雨</a>
+                        <a href="#">水光面膜</a>
+                        <a href="#">FOREO洁面仪</a>
+                        <a href="#">护肤</a>
+                    </dl>
+                    <dl>
+                        <a href="#">面部清洁</a>
+                    </dl>
+                    <dt>日用家居</dt>
+                    <dl>
+                        <a href="#" class="red">PHILIPS 飞利浦</a>
+                        <a href="#">电动牙刷</a>
+                        <a href="#">剃须刀</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">智能扫地机器人</a>
+                        <a href="#">料理机</a>
+                        <a href="#">家居用品</a>
+                    </dl>
+                    <dl>
+                        <a href="#">戴森</a>
+                        <a href="#">宠物用品</a>
+                    </dl>
+                    <dt>美食保健</dt>
+                    <dl>
+                        <a href="#">蛋白粉</a>
+                        <a href="#">减肥瘦身</a>
+                        <a href="#">其他保健</a>
+                        <a href="#">进口零食</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>数码家电</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>手机/配件</dt>
+                    <dl>
+                        <a href="#" class="red">苹果</a>
+                        <a href="#" class="red">华为</a>
+                        <a href="#">三星</a>
+                        <a href="#">数据线</a>
+                        <a href="#">手机壳</a>
+                    </dl>
+                    <dl>
+                        <a href="#">手机贴膜</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>生活电器</dt>
+                    <dl>
+                        <a href="#" class="red">取暖器</a>
+                        <a href="#">净化器/氧吧</a>
+                        <a href="#" class="red">扫地机器人</a>
+                    </dl>
+                    <dl>
+                        <a href="#">吸尘器/除螨</a>
+                        <a href="#">加湿器</a>
+                        <a href="#">挂烫机/电熨斗</a>
+                    </dl>
+                    <dl>
+                        <a href="#">除湿机</a>
+                        <a href="#">电风扇</a>
+                        <a href="#">其他生活电器</a>
+                    </dl>
+                    <dt>厨房电器</dt>
+                    <dl>
+                        <a href="#">汉美驰</a>
+                        <a href="#">电水壶/热水瓶</a>
+                        <a href="#">咖啡机/咖啡壶</a>
+                    </dl>
+                    <dl>
+                        <a href="#">原汁机/榨汁机</a>
+                        <a href="#">电饭煲</a>
+                        <a href="#">搅拌/料理机</a>
+                    </dl>
+                    <dl>
+                        <a href="#">面包机</a>
+                        <a href="#">豆浆机</a>
+                        <a href="#">净水器</a>
+                        <a href="#">其他厨房电器</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>数码影音</dt>
+                    <dl>
+                        <a href="#" class="red">数码相机</a>
+                        <a href="#">耳机/耳麦</a>
+                        <a href="#">音箱/音响</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">单反相机</a>
+                        <a href="#">微单</a>
+                        <a href="#">拍立得</a>
+                        <a href="#">平板/游戏机</a>
+                    </dl>
+                    <dl>
+                        <a href="#">智能穿戴</a>
+                        <a href="#">其他配件</a>
+                    </dl>
+                    <dt>个护健康</dt>
+                    <dl>
+                        <a href="#">电吹风/风筒</a>
+                        <a href="#">电动牙刷</a>
+                        <a href="#">剃须刀</a>
+                    </dl>
+                    <dl>
+                        <a href="#">卷/直发器</a>
+                        <a href="#">剃/脱毛器</a>
+                        <a href="#">鼻毛修剪器</a>
+                    </dl>
+                    <dl>
+                        <a href="#">理发器</a>
+                        <a href="#">按摩梳</a>
+                        <a href="#">其他个护电器</a>
+                    </dl>
+                    <dt>办公/外设</dt>
+                    <dl>
+                        <a href="#">凌美</a>
+                        <a href="#">kindle</a>
+                        <a href="#">派克</a>
+                        <a href="#">笔类</a>
+                        <a href="#">电子书</a>
+                    </dl>
+                    <dl>
+                        <a href="#">办公文具</a>
+                        <a href="#">纸本</a>
+                        <a href="#">照片</a>
+                        <a href="#">打印机</a>
+                        <a href="#">相片纸</a>
+                    </dl>
+                    <dl>
+                        <a href="#">鼠标/键盘</a>
+                        <a href="#">投影机</a>
+                        <a href="#">移动存储</a>
+                        <a href="#">游戏周边</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>环球美食</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>乳品/咖啡/麦片/冲饮</dt>
+                    <dl>
+                        <a href="#">成人奶粉</a>
+                        <a href="#">奶片</a>
+                        <a href="#">进口牛奶</a>
+                        <a href="#">酸奶</a>
+                        <a href="#">麦片</a>
+                    </dl>
+                    <dl>
+                        <a href="#">热可可</a>
+                        <a href="#">其他冲饮</a>
+                        <a href="#">速溶咖啡</a>
+                        <a href="#">咖啡粉</a>
+                    </dl>
+                    <dl>
+                        <a href="#">咖啡豆</a>
+                        <a href="#">胶囊咖啡</a>
+                    </dl>
+                    <dt>茶/酒/饮料</dt>
+                    <dl>
+                        <a href="#" class="red">葡萄酒</a>
+                        <a href="#">洋酒</a>
+                        <a href="#">白酒</a>
+                        <a href="#">啤酒</a>
+                        <a href="#">黄酒</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">品质水饮</a>
+                        <a href="#">饮料</a>
+                        <a href="#">碳酸饮料</a>
+                        <a href="#">果蔬汁</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">花草茶</a>
+                        <a href="#">茶饮</a>
+                    </dl>
+                    <dt>休闲零食</dt>
+                    <dl>
+                        <a href="#">蜜饯果干</a>
+                        <a href="#">糖果巧克力</a>
+                        <a href="#">薯片/膨化</a>
+                    </dl>
+                    <dl>
+                        <a href="#">海产品</a>
+                        <a href="#">果冻布丁</a>
+                        <a href="#">其他零食</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>人气热门</dt>
+                    <dl>
+                        <a href="#">德运丸</a>
+                        <a href="#">太拉面</a>
+                        <a href="#">UCC咖啡</a>
+                        <a href="#">轩尼诗</a>
+                    </dl>
+                    <dl>
+                        <a href="#">成人奶粉</a>
+                        <a href="#">早餐麦片</a>
+                        <a href="#">歌帝梵</a>
+                        <a href="#">卡乐比</a>
+                    </dl>
+                    <dl>
+                        <a href="#">巴黎水</a>
+                    </dl>
+                    <dt>粮油副食</dt>
+                    <dl>
+                        <a href="#" class="red">食用油/橄榄油</a>
+                        <a href="#" class="red">泡面</a>
+                        <a href="#">方便</a>
+                        <a href="#">速食罐头</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">米面杂粮</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>饼干糕点</dt>
+                    <dl>
+                        <a href="#">饼干</a>
+                        <a href="#">糕点</a>
+                        <a href="#">莱家威化</a>
+                        <a href="#">中秋月饼</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>运动户外</span><i>></i></a>
+            <div class="tab">
+                <div class="left">
+                    <dt>运动鞋</dt>
+                    <dl>
+                        <a href="#">跑步鞋</a>
+                        <a href="#">休闲鞋</a>
+                        <a href="#">篮球鞋</a>
+                        <a href="#">NIKE</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">阿迪达斯</a>
+                        <a href="#">ASICS</a>
+                        <a href="#">美津浓</a>
+                        <a href="#">圣康尼</a>
+                    </dl>
+                    <dl>
+                        <a href="#">SKORA</a>
+                        <a href="#">UnderArmour</a>
+                    </dl>
+                    <dt>户外鞋靴</dt>
+                    <dl>
+                        <a href="#">登山鞋</a>
+                        <a href="#">徒步鞋</a>
+                        <a href="#">溯溪鞋</a>
+                        <a href="#">越野跑鞋</a>
+                    </dl>
+                    <dl>
+                        <a href="#">LOWA</a>
+                        <a href="#">CRISP</a>
+                        <a href="#">Besta</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>户外装备</dt>
+                    <dl>
+                        <a href="#">头巾</a>
+                        <a href="#">腰包</a>
+                        <a href="#">登山包</a>
+                        <a href="#">休闲包</a>
+                        <a href="#">水壶</a>
+                    </dl>
+                    <dl>
+                        <a href="#">打火机</a>
+                        <a href="#">军刀</a>
+                        <a href="#">维氏</a>
+                        <a href="#">Osprey</a>
+                        <a href="#">格里高利</a>
+                    </dl>
+                    <dl>
+                        <a href="#">露营装备</a>
+                    </dl>
+                </div>
+                <div class="middle">
+                    <dt>运动服装</dt>
+                    <dl>
+                        <a href="#" class="red">运动T恤</a>
+                        <a href="#">运动卫衣</a>
+                        <a href="#">更多商品</a>
+                        <a href="#">NIKE</a>
+                    </dl>
+                    <dl>
+                        <a href="#">阿迪达斯</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>户外服装</dt>
+                    <dl>
+                        <a href="#">速干T恤</a>
+                        <a href="#">卫衣衬衣</a>
+                        <a href="#">皮肤风衣</a>
+                        <a href="#">冲锋衣裤</a>
+                    </dl>
+                    <dl>
+                        <a href="#">户外裤</a>
+                        <a href="#">功能内衣</a>
+                        <a href="#">帽子/皮带</a>
+                        <a href="#">土拨鼠</a>
+                    </dl>
+                    <dl>
+                        <a href="#">巴塔</a>
+                        <a href="#">棉服</a>
+                    </dl>
+                    <dt>更多分类</dt>
+                    <dl>
+                        <a href="#">汽车机油</a>
+                        <a href="#">壳牌</a>
+                        <a href="#">嘉实多</a>
+                        <a href="#">智能穿戴</a>
+                    </dl>
+                    <dl>
+                        <a href="#">速尔跑步机</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+        <li>
             <a href="#"><span>水果生鲜</span><i>></i></a>
-        </div>
-        <div class="nav-right">
-            <div id="tab1">1</div>
-            <div id="tab2">2</div>
-            <div id="tab3">3</div>
-            <div id="tab4">4</div>
-            <div id="tab5">5</div>
-            <div id="tab6">6</div>
-            <div id="tab7">7</div>
-            <div id="tab8">8</div>
-            <div id="tab9">9</div>
-            <div id="tab10">10</div>
-        </div>
-    </div>
+            <div class="tab">
+                <div class="left">
+                    <dt>新鲜水果</dt>
+                    <dl>
+                        <a href="#">火龙果</a>
+                        <a href="#">奇异果</a>
+                        <a href="#">车厘子</a>
+                        <a href="#">榴莲</a>
+                        <a href="#">柠檬</a>
+                    </dl>
+                    <dl>
+                        <a href="#">牛油果</a>
+                        <a href="#">苹果</a>
+                        <a href="#">橙子</a>
+                        <a href="#">木瓜</a>
+                        <a href="#">葡萄</a>
+                    </dl>
+                    <dl>
+                        <a href="#">其他水果</a>
+                        <a href="#">柚子梨</a>
+                        <a href="#">山竹</a>
+                        <a href="#">龙眼</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>水产海鲜</dt>
+                    <dl>
+                        <a href="#">鱼类/三文鱼</a>
+                        <a href="#">虾类</a>
+                        <a href="#">其他水产</a>
+                        <a href="#">海参</a>
+                    </dl>
+                    <dl>
+                        <a href="#">贝类</a>
+                        <a href="#">螃蟹</a>
+                        <a href="#">海鲜礼盒</a>
+                        <a href="#">鱼类制品</a>
+                        <a href="#">乌贼</a>
+                    </dl>
+                    <dl></dl>
+                    <dt>蔬菜食材</dt>
+                    <dl>蔬菜</dl>
+                </div>
+                <div class="middle">
+                    <dt>肉品禽蛋</dt>
+                    <dl>
+                        <a href="#">牛肉</a>
+                        <a href="#">牛排</a>
+                        <a href="#">其他肉类</a>
+                        <a href="#">鸡肉产品</a>
+                        <a href="#">鸡蛋</a>
+                    </dl>
+                    <dl>
+                        <a href="#" class="red">猪肉/腊肠/火腿</a>
+                        <a href="#" class="red">驴肉</a>
+                        <a href="#" class="red">火锅食材</a>
+                    </dl>
+                    <dl></dl>
+                    <dl></dl>
+                    <dt>速冻特产</dt>
+                    <dl>
+                        <a href="#">冷冻食品</a>
+                        <a href="#">冷冻面点</a>
+                        <a href="#">海鲜制品</a>
+                        <a href="#">奶制品</a>
+                    </dl>
+                    <dl>
+                        <a href="#">水饺</a>
+                        <a href="#">蛋糕面包</a>
+                        <a href="#">冰淇淋</a>
+                        <a href="#">其他冷冻食品</a>
+                    </dl>
+                </div>
+                <div class="right"></div>
+            </div>
+        </li>
+    </ul>
 </div>
 <!--goods start-->
 <div id="goods-wrap">
@@ -356,20 +1329,20 @@
 
 	$(function () {
 		//1 1.给tab里面的a绑定鼠标移入事件
-
-		$(".nav-left").children("a").mouseenter(function () {
-
-
-     // 拿到上面a标签对应的索引，这个索引与下面的div是对应
-			var tempIndex=$(this).index();
-			console.log(tempIndex);
-
-			//从当前的li去找他的父亲（ul）,再有从ul去找它的兄弟元素 div ，找到了div之后，在去找div里面的后代 div,
-			//再给后代div中指定的某一个div设置样式，再有让兄弟们移除类样式
-			$(this).parent(".nav-left").next(".nav-right").find("div")
-				.eq( tempIndex).addClass("selected").siblings("div").removeClass("selected");
-
-		})
-
+//
+//		$("#banner-nav").children("li").mouseenter(function () {
+//               //链式编程
+//			$(this).children("div").css("display","block").end().siblings("li").children("div").css("display","none");
+//
+//		});
+		
+		$("#banner-nav").children("li").hover(
+			function () {
+				$(this).addClass("select").children("div").show().end().siblings("li").children("div").css("display", "none");
+			},
+			function () {
+				$(this).removeClass("select").children("div").hide();
+			}
+		)
 	})
 </script>

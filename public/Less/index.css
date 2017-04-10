@@ -11,6 +11,12 @@ body {
 ul li {
   list-style: none;
 }
+input {
+  outline: none;
+}
+:focus {
+  outline: none;
+}
 a {
   text-decoration: none;
   color: #666;
@@ -116,8 +122,54 @@ a:hover {
 }*/
 /*search start*/
 #search-wrap #search {
-  height: 150px;
-  padding-top: 30px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+}
+#search-wrap #search .left {
+  flex: 1;
+}
+#search-wrap #search .left img {
+  margin-top: 20px;
+}
+#search-wrap #search .middle {
+  flex: 3;
+  text-align: center;
+}
+#search-wrap #search .middle input {
+  width: 400px;
+  height: 40px;
+  border: 3px solid #000;
+  padding-left: 10px;
+}
+#search-wrap #search .middle span {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background: #000;
+  position: relative;
+  top: 15px;
+}
+#search-wrap #search .middle ul {
+  display: block;
+  margin-left: 105px;
+}
+#search-wrap #search .middle ul li {
+  float: left;
+}
+#search-wrap #search .middle ul li a {
+  width: 50px;
+  height: 30px;
+  padding: 0 5px;
+  line-height: 30px;
+  border-left: 1px solid #ccc;
+  text-align: center;
+}
+#search-wrap #search .middle ul li a:hover {
+  text-decoration: underline;
+}
+#search-wrap #search .right {
+  flex: 1;
 }
 /*nav start*/
 #nav-wrap {
@@ -163,7 +215,7 @@ a:hover {
   height: 100%;
 }
 #banner-wrap #banner #nav2-box {
-  width: 1263px;
+  width: 1420px;
   height: 400px;
   position: absolute;
   border: 1px solid #ccc;
@@ -193,48 +245,101 @@ a:hover {
   top: -400px;
   background: rgba(0, 0, 0, 0);
 }
-#banner-wrap #banner-nav .nav-left {
+#banner-wrap #banner-nav li {
   width: 160px;
-  height: 400px;
+  height: 40px;
   background: rgba(0, 0, 0, 0.7);
-  float: left;
 }
-#banner-wrap #banner-nav .nav-left a {
-  width: 100%;
+#banner-wrap #banner-nav li a {
+  width: 90%;
   height: 40px;
   display: block;
+  margin: 0 auto;
   line-height: 40px;
   color: #fff;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cbccc1;
+  /* &:hover {
+          background: rgba(0, 0, 0, .5);
+        }*/
 }
-#banner-wrap #banner-nav .nav-left a:hover {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0 10px;
-  border-left: 3px solid red;
-  border-right: 2px solid white;
-}
-#banner-wrap #banner-nav .nav-left a span {
+#banner-wrap #banner-nav li a span {
   color: #fff;
   padding-right: 5px;
 }
-#banner-wrap #banner-nav .nav-right {
+#banner-wrap #banner-nav li .tab {
   width: 930px;
   height: 400px;
-  position: relative;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
   background: #fff;
-  float: left;
-}
-#banner-wrap #banner-nav .nav-right div {
-  width: 930px;
-  height: 400px;
+  color: #000000;
   position: absolute;
   display: none;
   top: 0;
-  left: 0;
+  left: 160px;
 }
-#banner-wrap #banner-nav .nav-right .selected {
+#banner-wrap #banner-nav li .tab .left,
+#banner-wrap #banner-nav li .tab .middle,
+#banner-wrap #banner-nav li .tab .right {
+  width: 300px;
+  height: 380px;
+  padding: 10px 10px;
   display: block;
+  float: left;
+}
+#banner-wrap #banner-nav li .tab .left dt,
+#banner-wrap #banner-nav li .tab .middle dt,
+#banner-wrap #banner-nav li .tab .right dt {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid #ccc;
+}
+#banner-wrap #banner-nav li .tab .left dl,
+#banner-wrap #banner-nav li .tab .middle dl,
+#banner-wrap #banner-nav li .tab .right dl {
+  width: 300px;
+  height: 8px;
+}
+#banner-wrap #banner-nav li .tab .left dl a,
+#banner-wrap #banner-nav li .tab .middle dl a,
+#banner-wrap #banner-nav li .tab .right dl a {
+  width: 50px;
+  height: 8px;
+  padding: 0 5px;
+  color: #000;
+  display: inline;
+  border-bottom: 0;
+}
+#banner-wrap #banner-nav li .tab .left dl a:hover,
+#banner-wrap #banner-nav li .tab .middle dl a:hover,
+#banner-wrap #banner-nav li .tab .right dl a:hover {
+  width: 50px;
+  height: 8px;
+  padding: 0 5px;
+  border: 0;
+  background: #fff;
+  color: red;
+  display: inline;
+}
+#banner-wrap #banner-nav li .tab .left dl .red,
+#banner-wrap #banner-nav li .tab .middle dl .red,
+#banner-wrap #banner-nav li .tab .right dl .red {
+  color: red;
+}
+#banner-wrap #banner-nav li .tab .left dl a + a,
+#banner-wrap #banner-nav li .tab .middle dl a + a,
+#banner-wrap #banner-nav li .tab .right dl a + a {
+  border-left: 1px solid #ccc;
+}
+#banner-wrap #banner-nav li .tab .left dl a + a:hover,
+#banner-wrap #banner-nav li .tab .middle dl a + a:hover,
+#banner-wrap #banner-nav li .tab .right dl a + a:hover {
+  border-left: 1px solid #ccc;
+}
+#banner-wrap #banner-nav .select {
+  border-left: 5px solid red;
+  background: rgba(0, 0, 0, 0.5);
 }
 /*goods start*/
 #goods-wrap {

@@ -1,5 +1,5 @@
 .swiper-container {
-    width: 1320px;
+    width: 1420px;
     height: 400px;
     margin: 0 auto;
 }
@@ -25,11 +25,11 @@
 }
 .swiper-button-prev{
     position: absolute;
-    left:300px;
+    left:25%;
 }
 .swiper-button-next{
     position: absolute;
-    right:150px;
+    right:15%;
 }
 
 

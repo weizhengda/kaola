@@ -1,0 +1,44 @@
+
+*{
+  margin:0;
+  padding:0;
+}
+
+ul,li{
+  list-style: none;
+}
+
+#top-wrap {
+  width:100%;
+  height: 31px;
+  line-height: 31px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #ededee;
+  & #top {
+    width:1090px;
+    margin:0 auto;
+    color: #666;
+    & #top-left {
+      float: left;
+      & a {
+        padding-left: 10px;
+      }
+    }
+    & #top-md {
+      margin-left: 20px;
+      float: left;
+    }
+    & #top-right {
+      float: right;
+      & li {
+        float: left;
+        & a {
+          padding: 0 10px;
+          &:first-child {
+          }
+          border-left: 1px solid #ccc;
+        }
+      }
+    }
+  }
+}
