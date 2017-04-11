@@ -37,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 动态全局变量
 app.use(function(req, res, next){
     res.locals.user = req.session.user;
+    var err = req.session.error;
     res.locals.message = '';
     if (err) res.locals.message = '<div class="alert alert-danger" style="margin-bottom: 20px;color:red;">' + err + '</div>';
     next();
