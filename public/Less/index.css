@@ -175,6 +175,7 @@ a:hover {
 #search-wrap #search .middle {
   width: 600px;
   float: left;
+  margin-left: 100px;
   text-align: center;
 }
 #search-wrap #search .middle input {

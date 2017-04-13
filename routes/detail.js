@@ -16,7 +16,7 @@ module.exports = function ( app ) {
 	});
 	
 	
-	//获取对应Id商品的对应信息
+	//获取对应Id商品的信息
 	app.get('/detail/:id', function(req, res) {
 		res.render('/detail');
 	});

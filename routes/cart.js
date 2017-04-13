@@ -23,12 +23,14 @@ module.exports = function ( app ) {
             Cart.findOne({"uId":req.session.user._id, "cId":req.params.id},function(error,doc){
                 //商品已存在 +1
                 if(doc){
-                    Cart.update({"uId":req.session.user._id, "cId":req.params.id},{$set : { cQuantity : doc.cQuantity + 1 }},function(error,doc){
+                    Cart.update({"uId":req.session.user._id, "cId":req.params.id},{$set : { cQuantity : doc.cQuantity + 1 }}
+                    ,function(error,doc){
                         //成功返回1  失败返回0
-                        /*if(doc > 0){
+                        if(doc > 0){
                             res.redirect('/list');
-                        }*/
-                    });
+                        }
+                    }
+                    );
                 //商品未存在，添加
                 }else{
                     Commodity.findOne({"_id": req.params.id}, function (error, doc) {
@@ -40,9 +42,10 @@ module.exports = function ( app ) {
                                 cPrice: doc.price,
                                 cImgSrc: doc.imgSrc,
                                 cQuantity : 1
-                            },function(error,doc){
+                            }
+                            ,function(error,doc){
                                 if(doc){
-                                    res.redirect('/list');
+                                    res.redirect('/cart');
                                 }
                             });
                         } else {
