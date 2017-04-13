@@ -3,20 +3,25 @@
   margin:0;
   padding:0;
 }
+a{
+  color:#666;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    color:red;
+  }
+}
 
 ul,li{
   list-style: none;
 }
 
 #top-wrap {
-  width:100%;
   height: 31px;
   line-height: 31px;
   background: #f2f2f2;
   border-bottom: 1px solid #ededee;
   & #top {
-    width:1090px;
-    margin:0 auto;
     color: #666;
     & #top-left {
       float: left;
@@ -27,16 +32,50 @@ ul,li{
     & #top-md {
       margin-left: 20px;
       float: left;
+      position: relative;
+      a{
+        .code{
+          width:100px;
+          height:100px;
+          position: absolute;
+          top:30px;
+          left:-20px;
+          display: none;
+        }
+      }
+      a:hover{
+        .code{
+          display: block;
+        }
+      }
     }
     & #top-right {
       float: right;
-      & li {
-        float: left;
-        & a {
-          padding: 0 10px;
-          &:first-child {
+      li{
+        float:left;
+        position: relative;
+        &:hover{
+          div{
+            display: block;
           }
+        }
+        >a {
+          padding: 0 10px;
+          position: relative;
           border-left: 1px solid #ccc;
+        }
+        div{
+          width:120px;
+          background:#fff;
+          position: absolute;
+          z-index:100;
+          padding:0 10px;
+          display:none;
+          top:30px;
+          left:0;
+          >a{
+            display: block;
+          }
         }
       }
     }

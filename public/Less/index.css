@@ -1,12 +1,16 @@
 html,
 body {
-  width: 100%;
-  height: 100%;
+  position: relative;
   overflow-x: hidden;
 }
 * {
   margin: 0;
   padding: 0;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 ul li {
   list-style: none;
@@ -30,6 +34,7 @@ a:hover {
 #nav-wrap,
 #banner-wrap,
 #goods-wrap,
+#link-wrap,
 #footer-wrap {
   width: 100%;
 }
@@ -37,6 +42,7 @@ a:hover {
 #search,
 #nav,
 #goods,
+#link,
 #footer {
   width: 1090px;
   margin: 0 auto;
@@ -60,16 +66,46 @@ a:hover {
 #top-wrap #top #top-md {
   margin-left: 20px;
   float: left;
+  position: relative;
+}
+#top-wrap #top #top-md a .code {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  display: none;
+}
+#top-wrap #top #top-md a:hover .code {
+  display: block;
 }
 #top-wrap #top #top-right {
   float: right;
 }
 #top-wrap #top #top-right li {
   float: left;
+  position: relative;
 }
-#top-wrap #top #top-right li a {
+#top-wrap #top #top-right li:hover div {
+  display: block;
+}
+#top-wrap #top #top-right li > a {
   padding: 0 10px;
+  position: relative;
   border-left: 1px solid #ccc;
+}
+#top-wrap #top #top-right li div {
+  width: 120px;
+  background: #fff;
+  position: absolute;
+  z-index: 100;
+  padding: 0 10px;
+  display: none;
+  top: 30px;
+  left: 0;
+}
+#top-wrap #top #top-right li div > a {
+  display: block;
 }
 /*#search-wrap{
   height:100px;
@@ -121,19 +157,24 @@ a:hover {
   }
 }*/
 /*search start*/
+#search-wrap {
+  background: #fff;
+  z-index: 1000;
+}
 #search-wrap #search {
   height: 120px;
-  display: flex;
   justify-content: space-around;
 }
 #search-wrap #search .left {
-  flex: 1;
+  width: 150px;
+  float: left;
 }
 #search-wrap #search .left img {
   margin-top: 20px;
 }
 #search-wrap #search .middle {
-  flex: 3;
+  width: 600px;
+  float: left;
   text-align: center;
 }
 #search-wrap #search .middle input {
@@ -169,7 +210,8 @@ a:hover {
   text-decoration: underline;
 }
 #search-wrap #search .right {
-  flex: 1;
+  width: 150px;
+  float: left;
 }
 #search-wrap #search .right .cart {
   width: 100px;
@@ -178,6 +220,9 @@ a:hover {
   line-height: 40px;
   margin-top: 15px;
   border: 1px solid #ccc;
+}
+#search-wrap #search .right .cart span {
+  padding: 10px;
 }
 #search-wrap #search .right .cart i {
   width: 10px;
@@ -506,8 +551,29 @@ a:hover {
 #goods-wrap #goods .goods-content4 div {
   flex: 1;
 }
+#goods-wrap #goods .goods-content4 .f1 {
+  position: relative;
+}
 #goods-wrap #goods .goods-content4 .f1 img {
   width: 100%;
+}
+#goods-wrap #goods .goods-content4 .f1 .link1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+#goods-wrap #goods .goods-content4 .f1 .link1 a {
+  width: 70px;
+  height: 70px;
+  margin: 10px 0;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  line-height: 70px;
+  text-align: center;
+}
+#goods-wrap #goods .goods-content4 .f1 .link1 a:nth-of-type(1) {
+  display: none;
 }
 #goods-wrap #goods .goods-content4 .f2 {
   display: flex;
@@ -527,6 +593,20 @@ a:hover {
 }
 #goods-wrap #goods .goods-content4 .f4 {
   border-left: 1px solid #ccc;
+}
+#goods-wrap #goods .pai {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 10px 0 30px 0;
+  display: flex;
+}
+#goods-wrap #goods .pai span {
+  flex: 1;
+  line-height: 100px;
+  text-align: center;
+}
+#goods-wrap #goods .pai a {
+  flex: 1;
 }
 #goods-wrap #aside-left {
   width: 100px;
@@ -573,15 +653,95 @@ a:hover {
   height: 100%;
 }
 #goods-wrap #aside-right {
-  width: 100px;
-  height: 350px;
+  width: 80px;
+  height: 200px;
+  text-align: center;
   position: absolute;
   top: 0;
   right: -100px;
   background: #fff;
   border: 1px solid #ccc;
 }
+#goods-wrap #aside-right ul {
+  text-align: center;
+}
+#goods-wrap #aside-right ul li {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+/*link start*/
+#link-wrap #link .bottom {
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+  display: flex;
+}
+#link-wrap #link .bottom .logo {
+  flex: 2;
+}
+#link-wrap #link .bottom ul {
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+#link-wrap #link .bottom ul li {
+  margin-bottom: 10px;
+}
+#link-wrap #link .bottom ul li:nth-of-type(1) {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+#link-wrap #link .bottom a {
+  flex: 1;
+  text-align: center;
+}
+#link-wrap #link .bottom a img {
+  width: 100%;
+}
 /*footer start*/
 #footer-wrap {
   background: #333;
+  margin-top: 50px;
+}
+#footer-wrap #footer {
+  width: 1200px;
+  height: 150px;
+  padding-top: 10px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 14px;
+}
+#footer-wrap #footer .f1 {
+  text-align: center;
+}
+#footer-wrap #footer .f1 a {
+  color: #fff;
+}
+#footer-wrap #footer .f1:nth-child(1) {
+  padding-right: 20px;
+}
+#footer-wrap #footer .f1:nth-child(10) {
+  padding-left: 20px;
+}
+#footer-wrap .f2 {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+#footer-wrap .f2 span {
+  flex: 1;
+}
+#footer-wrap .f3 {
+  margin: 10px 0;
+  text-align: center;
+}
+#footer-wrap .f3 span {
+  padding-left: 10px;
+}
+#footer-wrap .f4 {
+  text-align: center;
+}
+#footer-wrap .f4 img {
+  height: 30px;
 }

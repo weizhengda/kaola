@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/swiper.min.css">
     <link rel="stylesheet" href="/css/mySwiper.css">
-    <link rel="stylesheet" href="/Less/index.css">
+    <link rel="stylesheet" href="/Less/detail.css">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <!--轮播图自定义配置函数-->
     <script src="/js/mySwiper.js"></script>
+
+    <!--放大镜函数-->
+    <script src="/js/fangda.js"></script>
+
 </head>
 <body>
 <nav id="top-wrap">
@@ -91,44 +95,113 @@
                 <li><a href="#">LAMY</a></li>
             </ul>
         </div>
-        <div class="right">
-            <a href="cart">
+        <a href="cart">
+            <div class="right">
                 <div class="cart">
                     <span>购物车</span>
                     <i>3</i>
                 </div>
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
 </header>
 <nav id="nav-wrap">
     <div id="nav">
         <ul>
-            <li>所有分类</li>
+            <li id="all">所有分类</li>
             <li><a href="/">首页</a></li>
-            <li><a href="#">今日限时购</a></li>
-            <li><a href="list">每日上新</a></li>
-            <li><a href="#">国家馆</a></li>
-            <li><a href="#">全球旗舰</a></li>
+            <li><a href="list">今日限时购</a></li>
+            <li><a href="#"></a>每日上新</li>
+            <li><a href="#"></a>国家馆</li>
+            <li><a href="#"></a>全球旗舰</li>
         </ul>
     </div>
 </nav>
 <div id="banner-wrap">
     <div id="banner">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/images/banner1.jpg"/></div>
-                <div class="swiper-slide"><img src="/images/banner2.jpg"/></div>
-                <div class="swiper-slide"><img src="/images/banner3.jpg"/></div>
-                <div class="swiper-slide"><img src="/images/banner4.jpg"/></div>
-                <div class="swiper-slide"><img src="/images/banner5.jpg"/></div>
-                <div class="swiper-slide"><img src="/images/banner6.jpg"/></div>
+        <div id="content">
+            <div class="top">
+                <div class="left">
+                    <a href="#">网易考拉海购</a>
+                </div>
+                <div class="right">
+                    <a href="#">旗舰店</a>
+                    <a href="#">进店看看</a>
+                </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="goods">
+                <div id="left">
+                    <div id="smallImg">
+                        <div id="smallArea"></div>
+                    </div>
+                    <div id="bigArea">
+                        <img id="bigImg" src="images/detail2-1.jpg"/>
+                    </div>
+                    <div id="middle">
+                        <span><</span>
+                        <a href="#"><img src="images/detail2-2.jpg" alt=""></a>
+                        <a href="#"><img src="images/detail2-3.jpg" alt=""></a>
+                        <a href="#"><img src="images/detail2-4.jpg" alt=""></a>
+                        <a href="#"><img src="images/detail2-5.jpg" alt=""></a>
+                        <span>></span>
+                    </div>
+                </div>
+                <div id="right">
+                    <h3>THETHING潮牌2017春季新款男装 双排扣棒球夹克男户外运动外套</h3>
+                    <h4>原创设计潮牌商场同款</h4>
+                    <div class="l1">
+                        <span>售价</span>
+                        <b>¥383.00</b>
+                        <i>5.5折</i>
+                        <em>参考价  ¥698.00</em>
+                    </div>
+                    <div class="l2">
+                        <span>活动</span>
+                        <b>直降</b>
+                        <i>考拉特惠</i>
+                    </div>
+                    <div class="l3">
+                        <span>税费</span>
+                        <b>【本商品免税】</b>
+                        <em>无需额外交税</em>
+                    </div>
+                    <div class="l4">
+                        <span>运费</span>
+                        <b>上海</b>
+                        <i>至</i>
+                        <select name="" id="">
+                            <option value="广东">广东省深圳市/南山区</option>
+                        </select>
+                        <em>运费预计12元起</em>
+                    </div>
+                    <div class="l5">
+                        <span>服务</span>
+                        <b>本商品由<em>旗舰店</em>发货</b>
+                    </div>
+                    <div class="l6">
+                        <span>颜色</span>
+                        <a href="#"><img src="images/detail3-1.jpg" alt=""></a>
+                        <a href="#"><img src="images/detail3-2.jpg" alt=""></a>
+                    </div>
+                    <div class="l7">
+                        <span>尺码</span>
+                        <a href="#">XS</a>
+                        <a href="#">S</a>
+                        <a href="#">M</a>
+                        <a href="#">L</a>
+                        <a href="#">XS</a>
+                        <a href="#">L</a>
+                    </div>
+                    <div class="l8">
+                        <em>数量</em>
+                        <span><a href="#" id="less">-</a><b id="num">0</b><a href="#" id="more">+</a></span>
+                    </div>
+                    <div class="l9">
+                        <a href="#">立即购买</a>
+                        <a href="#">加入购物车</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <ul id="banner-nav">
@@ -1108,849 +1181,6 @@
         </li>
     </ul>
 </div>
-<div id="biao-wrap">
-    <div id="biao">
-        <a href="#">100%正品</a>
-        <a href="#">30天无忧退货</a>
-        <a href="#">满88包邮（部分商品除外</a>
-        <a href="#"></a>
-        <a href="#">领考拉1000元新人礼，APP下单更享手机价</a>
-    </div>
-</div>
-<!--goods start-->
-<div id="goods-wrap">
-    <div id="goods">
-        <!--第一推荐-->
-        <div class="tui">
-            <a href="#"><img src="images/tui1.jpg" alt=""></a>
-            <a href="#"><img src="images/tui2.jpg" alt=""></a>
-            <a href="#"><img src="images/tui3.jpg" alt=""></a>
-            <a href="#"><img src="images/tui4.jpg" alt=""></a>
-        </div>
-        <!--今日限购 1-->
-        <div class="goods-title1">
-            <div class="left">
-                <b>今日限时购</b>
-            </div>
-            <div class="right">
-                <a>进入限时购频道></a>
-            </div>
-        </div>
-        <div class="goods-content1">
-            <div class="left">
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                            <img class="media-object" src="images/goods1-1.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Middle aligned media</h4>
-                        ...
-                    </div>
-                </div>
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                            <img class="media-object" src="images/goods1-2.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Middle aligned media</h4>
-                        ...
-                    </div>
-                </div>
-            </div>
-            <div class="middle">
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                            <img class="media-object" src="images/goods1-3.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Middle aligned media</h4>
-                        ...
-                    </div>
-                </div>
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                            <img class="media-object" src="images/goods1-4.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Middle aligned media</h4>
-                        ...
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <a href="#"><img src="images/goods1-5.jpg" alt=""></a>
-            </div>
-        </div>
-        <!--每日上新 2-->
-        <div class="goods-title1">
-            <div class="left">
-                <b>每日上新</b>
-            </div>
-            <div class="right">
-                <a>进入新品频道></a>
-            </div>
-        </div>
-        <div class="goods-content2">
-            <div class="top">
-                <div class="item">
-                    <a href="#"><img src="images/goods2-1.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-2.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-3.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-4.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-5.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-6.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="item">
-                    <a href="#"><img src="images/goods2-7.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-8.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-9.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-10.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-11.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/goods2-11.jpg" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <!--热门品牌 3-->
-        <div class="goods-title1">
-            <div class="left">
-                <b>热门品牌</b>
-            </div>
-            <div class="right">
-                <a>换一批</a>
-            </div>
-        </div>
-        <!--母婴专区 4-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>母婴专区</b>
-                <span>热搜词：</span>
-                <a href="#">家居出行</a>
-                <a href="#">童装童鞋</a>
-                <a href="#">N元任选</a>
-                <a href="#" class="red">春季童装</a>
-                <a href="#" class="red">儿童床</a>
-                <a href="#">孕妈塑身</a>
-                <a href="#">防妊娠纹</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--美容彩妆 5-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>美容彩妆</b>
-                <span>热搜词：</span>
-                <a href="#">面霜</a>
-                <a href="#">乳液</a>
-                <a href="#" class="red">马油</a>
-                <a href="#">香水</a>
-                <a href="#">护手霜</a>
-                <a href="#" class="red">科颜氏</a>
-                <a href="#">洗面奶</a>
-                <a href="#">卸妆</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--服饰鞋包 6-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>服饰鞋包</b>
-                <span>热搜词：</span>
-                <a href="#">MK</a>
-                <a href="#" class="red">UGG</a>
-                <a href="#" class="red">Burberry</a>
-                <a href="#" class="red">迷人饰品</a>
-                <a href="#" class="red">FURLA</a>
-                <a href="#">COACH</a>
-                <a href="#" class="red">SW鞋子</a>
-                <a href="#">双肩包</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--家居个护 7-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>家居个护</b>
-                <span>热搜词：</span>
-                <a href="#" class="red">吕</a>
-                <a href="#" class="red">碧然德</a>
-                <a href="#" class="red">乐而雅</a>
-                <a href="#">床品</a>
-                <a href="#" class="red">呵护口腔</a>
-                <a href="#">卡诗</a>
-                <a href="#" class="red">空气净化</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--营养保健 8-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>营养保健</b>
-                <span>热搜词：</span>
-                <a href="#" class="red">Swisse</a>
-                <a href="#">蔓越莓</a>
-                <a href="#">鱼油</a>
-                <a href="#">大麦若叶</a>
-                <a href="#" class="red">减肥瘦身</a>
-                <a href="#" class="red">澳佳宝</a>
-                <a href="#">男性保健</a>
-                <a href="#">美容养颜</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--海外直邮 9-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>海外直邮</b>
-                <span>热搜词：</span>
-                <a href="#" class="red">飞利浦</a>
-                <a href="#" class="red">DW</a>
-                <a href="#" class="red">CITIZN</a>
-                <a href="#" class="red">beats</a>
-                <a href="#">潘多拉</a>
-                <a href="#">雅培</a>
-                <a href="#">手表</a>
-                <a href="#" class="red">音箱</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--数码家电 10-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>数码家电</b>
-                <span>热搜词：</span>
-                <a href="#" class="red">iphone</a>
-                <a href="#" class="red">钢笔</a>
-                <a href="#" class="red">空气净化</a>
-                <a href="#">电动牙刷</a>
-                <a href="#">耳机</a>
-                <a href="#">音箱</a>
-                <a href="#">剃须刀</a>
-                <a href="#">原汁机</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--环球美食 11-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>环球美食</b>
-                <span>热搜词：</span>
-                <a href="#" class="red">牛奶</a>
-                <a href="#">饮料</a>
-                <a href="#" class="red">泡面</a>
-                <a href="#" class="red">月饼</a>
-                <a href="#">麦片</a>
-                <a href="#">坚果</a>
-                <a href="#" class="red">咖啡</a>
-                <a href="#">零食</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--运动户外 12-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>运动户外</b>
-                <span>热搜词：</span>
-                <a href="#" class="red">阿迪达斯</a>
-                <a href="#" class="red">耐克</a>
-                <a href="#">斯凯奇</a>
-                <a href="#">亚瑟士</a>
-                <a href="#" class="red">2件减50</a>
-                <a href="#">土拨鼠</a>
-                <a href="#">智能穿戴</a>
-                <a href="#" class="red">下单68折</a>
-            </div>
-            <div class="right">
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-        </div>
-        <div class="goods-content4">
-            <div class="f1">
-                <a href="#"><img src="images/4-1.jpg" alt="">
-                    <div class="link1">
-                        <a href="#">大牌奶粉</a>
-                        <a href="#">纸尿裤</a>
-                        <a href="#">洗护喂养</a>
-                        <a href="#">营养辅食</a>
-                        <a href="#">孕妈专区</a>
-                        <a href="#">玩具专区</a>
-                    </div>
-                </a>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-2.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-3.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f2">
-                <div class="top">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-4.jpg" alt=""></a>
-                </div>
-                <div class="bottom">
-                    <h3>辅食N元任选</h3>
-                    <p>最高99选9件</p>
-                    <a href="#"><img src="images/4-5.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="f4"></div>
-        </div>
-        <div class="pai">
-            <span>热卖品牌</span>
-            <a href="#"><img src="images/pai1-1.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-2.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-3.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-4.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-5.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-6.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-7.jpg" alt=""></a>
-            <a href="#"><img src="images/pai1-8.jpg" alt=""></a>
-        </div>
-        <!--猜你喜欢 13-->
-        <div class="goods-title2">
-            <div class="left">
-                <b>猜你喜欢</b>
-                <span>热搜词：</span>
-                <a href="#">家居出行</a>
-                <a href="#">童装童鞋</a>
-                <a href="#">N元任选</a>
-                <a href="#">春季童装</a>
-                <a href="#">儿童床</a>
-                <a href="#">孕妈塑身</a>
-                <a href="#">防妊娠纹</a>
-                <a href="#" style="border:0">更多好货></a>
-            </div>
-
-        </div>
-        <!--左侧导航条-->
-        <aside id="aside-left">
-            <ul>
-                <li><a href="#"><img src="/images/left1.jpg"/></a></li>
-                <li><a href="#">今日限购</a></li>
-                <li><a href="#">每日上新</a></li>
-                <li><a href="#">热门品牌</a></li>
-                <li><a href="#">母婴专区</a></li>
-                <li><a href="#">美容彩妆</a></li>
-                <li><a href="#">服饰鞋包</a></li>
-                <li><a href="#">家居个护</a></li>
-                <li><a href="#">营养保健</a></li>
-                <li><a href="#">海外直邮</a></li>
-                <li><a href="#">数码家电</a></li>
-                <li><a href="#">环球美食</a></li>
-                <li><a href="#">运动户外</a></li>
-                <li><a href="#"><img src="/images/left2.jpg"/></a></li>
-            </ul>
-        </aside>
-        <!--右侧导航条-->
-        <aside id="aside-right">
-            <ul>
-                <li><a href="#">签到</a></li>
-                <li><a href="cart">购物车</a></li>
-                <li><a href="#">App</a></li>
-                <li><a href="#top">Top</a></li>
-            </ul>
-        </aside>
-    </div>
-</div>
-<!--link-->
-<div id="link-wrap">
-    <div id="link">
-        <div class="top"></div>
-        <div class="bottom">
-            <div class="logo">
-                <a href="#"><img src="images/logo.png" alt=""></a>
-            </div>
-            <ul>
-                <li><a href="#">考拉保障</a></li>
-                <li><a href="#">假一赔十</a></li>
-                <li><a href="#">廉正监督</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">新手指南</a></li>
-                <li><a href="#">购物流程</a></li>
-                <li><a href="#">支付方式</a></li>
-                <li><a href="#">通关税费</a></li>
-                <li><a href="#">常见问题</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">售后服务</a></li>
-                <li><a href="#">退货政策</a></li>
-                <li><a href="#">退货流程</a></li>
-                <li><a href="#">退款说明</a></li>
-                <li><a href="#">联系客服</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">物流配送</a></li>
-                <li><a href="#">配送方式</a></li>
-                <li><a href="#">配送服务</a></li>
-                <li><a href="#">运费标准</a></li>
-                <li><a href="#">物流跟踪</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">联系我们</a></li>
-                <li><a href="#">招商合作</a></li>
-                <li><a href="#">销售联盟</a></li>
-                <li><a href="#">CEO邮箱</a></li>
-            </ul>
-            <a href="#"><img src="images/code-app.jpg" alt="">扫描下载手机版</a>
-        </div>
-    </div>
-</div>
 <!--footer-->
 <footer id="footer-wrap">
     <div id="footer">
@@ -1990,7 +1220,6 @@
      * 1.给tab里面的a绑定鼠标移入事件，对应的div显示（添加类名操作）
      * */
 
-    //tab切换
 	$(function () {
 		//1 1.给tab里面的a绑定鼠标移入事件
 //
@@ -1999,7 +1228,7 @@
 //			$(this).children("div").css("display","block").end().siblings("li").children("div").css("display","none");
 //
 //		});
-		
+
 		$("#banner-nav").children("li").hover(
 			function () {
 				$(this).addClass("select").children("div").show().end().siblings("li").children("div").css("display", "none");
@@ -2007,95 +1236,42 @@
 			function () {
 				$(this).removeClass("select").children("div").hide();
 			}
-		)
-	});
+		);
 
-
-	//固定search-wrap
-	$(function () {
-		// top的高度
-		var topHeight = $("#top-wrap").height();
-		console.log(topHeight);
-
-		// 监听window的滚动事件
-        $(window).scroll(function () {
-//         console.log(111);
-         var scrollTopHeight = $(window).scrollTop();
-			console.log(scrollTopHeight);
-
-
-			console.log('====================');
-         console.log(scrollTopHeight);
-
-         // 把 文档被卷去的高度和.top的高度做对比
-         if(scrollTopHeight >= topHeight) {
-         // 让导航栏变为固定定位
-         //$("#search").index.css("position", "fixed");
-         $("#search-wrap").css({
-         "position": "fixed",
-         "top": 0,
-             "height":"70px"
-         });
-         $("#search .right").css("display","none");
-         $("#search .middle ul").css("display","none");
-         // 给banner-wrap设置一个margin-top的值
-         $("#banner").css("margin-top","100px");
-         } else {
-         // 让导航栏变为默认的定位
-         $("#search-wrap").css(
-			 {
-				 "position": "static",
-				 "height":"120px"
-			 }
-         );
-			 $("#search .right").css("display","block");
-			 $("#search .middle ul").css("display","block");
-         // 让main变为默认的margin-top值
-         $("#banner").css("margin-top", 0);
-         }
-         });
-
-	});
-	//固定左右侧栏
-    $(function () {
-		// 监听window的滚动事件
-		// window.onscrolls
-		$(window).scroll(function () {
-//         console.log(111);
-			// 获取文档被卷去的高度
-			var scrollTopHeight = $(this).scrollTop();
-			console.log(scrollTopHeight);
-
-			// 把 文档被卷去的高度和.top的高度做对比
-			if(scrollTopHeight >=500) {
-				// 让导航栏变为固定定位
-				$("#goods-wrap #aside-left").css({
-					"position": "fixed",
-					"top": "100px",
-                    "left":"-15px"
-				})
-				$("#goods-wrap #aside-right").css({
-					"position": "fixed",
-					"top": "100px",
-					"right":0
-				});
-				// 给banner-wrap设置一个margin-top的值
-				$("#banner").css("margin-top","100px");
-			} else {
-				// 让导航栏变为默认的定位
-				$("#goods-wrap #aside-left").css({
-					"position": "absolute",
-					"top": 0,
-					"left":"-100px"
-				})
-				$("#goods-wrap #aside-right").css({
-					"position": "absolute",
-					"top": "10px",
-					"right":"-100px"
-				});
+		$("#all").hover(
+			function () {
+				$("#banner-nav").show();
+			},
+			function () {
 			}
+		);
+		$("#banner-nav").hover(
+			function () {
+				$(this).show();
+			},
+			function () {
+				$(this).hide();
+			}
+		);
+
+
+        //加减数量
+
+        var num=0;
+        $("#less").click(function () {
+        	console.log(num);
+        	if(num>0){
+				num--;
+				$("#num").text(num);
+            }else{
+        		num=0;
+				$("#num").text(num);
+            }
 		});
-
+		$("#more").click(function () {
+			num++;
+			console.log(num);
+			$("#num").text(num);
+		})
 	})
-
 </script>

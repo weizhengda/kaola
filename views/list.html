@@ -15,6 +15,24 @@
     <script src="js/swiper.min.js"></script>
     <!--轮播图自定义配置函数-->
     <script src="/js/mySwiper.js"></script>
+    <style type="text/css">
+        .panel-title{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .spys{
+            list-style-type: none;
+        }
+        .spys li{
+            float: left;
+            margin: 10px 10px;
+            width: 180px;
+            height: 230px;
+        }
+        .spys li div strong{
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <nav id="top-wrap">
@@ -102,7 +120,7 @@
                 <div class="g2">
                     <div class="media">
                         <div class="media-left">
-                            <a href="#">
+                            <a href="detail">
                                 <img class="media-object" src="images/list2-2.jpg" alt="...">
                             </a>
                         </div>
@@ -1199,410 +1217,24 @@
             </div>
             <div class="content">
                 <div class="row">
+                    <%for(var i in Commoditys){ if(!Commoditys[i].name)continue;%>
                     <div class="col-sm-6 col-md-3">
                         <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
+                            <a href="#"><img src="/images/<%=Commoditys[i].imgSrc%>" alt="..."></a>
                             <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
+                                <h3><%=Commoditys[i].name%></h3>
                                 <p>紧致嫩肤滋润</p>
                                 <div class="price">
-                                    <b>￥383</b>
+                                    <b>￥<%=Commoditys[i].price%></b>
                                     <i>698</i>
                                     <span>5.5折</span>
                                     <span>包邮</span>
                                 </div>
-                                <a href="#">立即抢购</a>
+                               <a href="/addToCart/<%=Commoditys[i]._id%>">立即抢购</a>
                                </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#"><img src="images/15-1.jpg" alt="..."></a>
-                            <div class="caption">
-                                <h3>天然维生素E皮肤紧致霜 50克</h3>
-                                <p>紧致嫩肤滋润</p>
-                                <div class="price">
-                                    <b>￥383</b>
-                                    <i>698</i>
-                                    <span>5.5折</span>
-                                    <span>包邮</span>
-                                </div>
-                                <a href="#">立即抢购</a>
-                            </div>
-                        </div>
-                    </div>
+                    <%}%>
                 </div>
             </div>
         </div>

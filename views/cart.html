@@ -88,6 +88,8 @@
         }
         .cart-body{
             background-color: #F7F7F7;
+            margin-left:42px;
+            text-align: center;
         }
         .cart-body ul li {
             list-style-type: none;
@@ -101,6 +103,7 @@
         .li-checkbox input{
             margin: 20px 5px 0 0;
         }
+
         .li-img a img{
             width: 40px;
             height: 50px;
@@ -141,27 +144,60 @@
             <% }%>
         </div>
         <div id="top-md">
-            <a href="#">手机考拉海购</a>
+            <a href="#">手机考拉海购
+                <div class="code">
+                    <img src="images/code-app.jpg" alt="">
+                </div>
+            </a>
         </div>
         <ul id="top-right">
             <li><a href="#">每日签到</a></li>
             <li><a href="#">我的订单</a></li>
-            <li><a href="#">个人中心</a></li>
-            <li><a href="#">客户服务</a></li>
-            <li><a href="#">充值中心</a></li>
+            <li><a href="#">个人中心</a>
+                <div class="inner">
+                    <a href="#">我的优惠券</a>
+                    <a href="#">我的考拉豆</a>
+                    <a href="#">账户安全</a>
+                    <a href="#">我的实名认证</a>
+                    <a href="#">我收藏的商品</a>
+                    <a href="#">售后管理</a>
+                </div>
+            </li>
+            <li><a href="#">客户服务</a>
+                <div class="inner">
+                    <a href="#">联系客服</a>
+                    <a href="#">帮助中心</a>
+                </div>
+            </li>
+            <li><a href="#">充值中心</a>
+                <div class="inner">
+                    <a href="#">话费充值</a>
+                    <a href="#">游戏充值</a>
+                </div>
+            </li>
             <li><a href="#">消费者告知书</a></li>
-            <li><a href="#">更多</a></li>
+            <li><a href="#">更多</a>
+                <div class="inner">
+                    <a href="#">收藏本站</a>
+                    <a href="#">新浪微博</a>
+                    <a href="#">微信公众号</a>
+                    <a href="#">易信公众号</a>
+                    <a href="#">招商合作</a>
+                    <a href="#">考拉招聘</a>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
 <div style="margin:50px auto;width: 900px;">
+    <a href="/"><img src="images/logo.png" alt=""></a>
     <div >
         <div>
-            <div style="float:right;">
+           <!-- <div style="float:right;">
                 <a class="btn  btn-xs btn-success" href="home" style="margin-right: 35px;">商品页</a>
                 <a class="btn btn-xs btn-info" href="logout">退 出</a>
-            </div>
-            <h2>购物车</h2>
+            </div>-->
+            <h2 style="text-align: right">购物车</h2>
             <hr>
         </div>
         <div >
@@ -170,9 +206,9 @@
                     <span style="margin-right: 200px;">
                         <input id="CheckAll"  type="checkbox" > 全选
                     </span>
-                    <span style="margin-right: 180px;">商品</span>
-                    <span style="margin-right: 210px;">价格</span>
-                    <span style="margin-right: 80px;">数量</span>
+                    <span style="margin-right: 150px;">商品信息</span>
+                    <span style="margin-right: 200px;">单价（元）</span>
+                    <span style="margin-right: 50px;">数量</span>
                     <span style="padding-right: 0px;">操作</span>
                 </div>
             </div>

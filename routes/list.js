@@ -1,14 +1,14 @@
 module.exports = function ( app ) {
-    app.get('/home', function (req, res) {
-        if(req.session.user){
+    app.get('/list', function (req, res) {
+       /* if(req.session.user){*/
             var Commodity = global.dbHelper.getModel('commodity');
             Commodity.find({}, function (error, docs) {
-                res.render('home',{Commoditys:docs});
+                res.render('list',{Commoditys:docs});
             });
-        }else{
+       /* }else{
             req.session.error = "请先登录"
             res.redirect('/login');
-        }
+        }*/
     });
     app.get('/addcommodity', function(req, res) {
         res.render('addcommodity');
